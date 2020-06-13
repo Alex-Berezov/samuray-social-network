@@ -6,7 +6,7 @@ const Navbar = () => {
                     <li>
                         <a href="#">
                             <i className="far fa-user"></i>
-                            Profile
+                            Profile123
                         </a>
                     </li>
                     <li>
