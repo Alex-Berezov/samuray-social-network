@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Profiler } from 'react';
 import './App.css';
+import './fonts/fonts.css';
+import './fontawesome-free-5.13.0-web/css/all.css';
+import Header from './components/Header';
+import Profile from './components/Profile';
+import RightSidebar from './components/RightSidebar';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <Header />
       </header>
+      
+      <main>
+		
+        <article>
+
+          <div class="wrapper">
+
+            <aside class="left_sadiebar">
+              <Navbar />
+            </aside>
+            
+            <Profile />
+
+            <aside class="right_sidebar">
+              <RightSidebar />
+            </aside>
+      
+          </div>
+
+        </article>
+    
+      </main>
+
+      <footer>
+        <Footer />      
+      </footer>
+
     </div>
   );
 }
