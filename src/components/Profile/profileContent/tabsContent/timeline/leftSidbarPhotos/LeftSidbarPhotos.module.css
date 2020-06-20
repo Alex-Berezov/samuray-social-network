@@ -1,0 +1,80 @@
+.tab_1_leftSidbar_photos {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(44, 101, 144, 0.1);
+}
+
+.tab_1_leftSidbar_photos .leftSidbar_photos_header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.tab_1_leftSidbar_photos .leftSidbar_photos_header h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.tab_1_leftSidbar_photos .leftSidbar_photos_header p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #50b5ff;
+}
+
+.tab_1_leftSidbar_photos .gallary ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.tab_1_leftSidbar_photos .gallary ul li {
+    width: calc(33% - 5px);
+    height: 90px;
+}
+
+.tab_1_leftSidbar_photos .gallary ul li a img {
+    height: 75px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1280px) {
+    .tab_1_leftSidbar_photos .gallary ul li {
+        height: 110px;
+    }
+    .tab_1_leftSidbar_photos .gallary ul li a img {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tab_1_leftSidbar_photos .gallary ul li {
+      height: 90px;
+    }
+  
+    .tab_1_leftSidbar_photos .gallary ul li a img {
+      height: 80px;
+    }
+}

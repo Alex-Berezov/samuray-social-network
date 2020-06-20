@@ -1,0 +1,14 @@
+.left {
+    width: 50%;
+}
+
+.left a img {
+    border-radius: 5px !important;
+    margin: 15px 7px;
+}
+
+@media screen and (max-width: 480px) {
+    .left {
+        width: 100%;
+    }
+}

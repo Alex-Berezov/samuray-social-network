@@ -1,0 +1,66 @@
+.single_post_info {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.single_post_info .likes {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.single_post_info .likes i {
+    margin-right: 10px;
+    color: #50b5ff;
+}
+
+.single_post_info .likes p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}
+
+.single_post_info .comments {
+    margin-left: 15px;
+}
+
+.single_post_info .comments p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}
+
+.single_post_info .share {
+    margin-left: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.single_post_info .share i {
+    margin-right: 10px;
+    color: #50b5ff;
+}
+
+.single_post_info .share p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}

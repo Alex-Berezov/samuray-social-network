@@ -1,0 +1,47 @@
+.single_comments_addComment {
+    margin-top: 15px;
+}
+
+.single_comments_addComment form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.single_comments_addComment form textarea {
+    width: 98%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    padding: 5px;
+    border: 1px solid #a5a9a3;
+    outline: none;
+}
+
+.single_comments_addComment form input {
+    margin-left: auto;
+    margin-top: 15px;
+    bottom: 5px;
+    right: 12px;
+    padding: 9px 15px;
+    background: #50b5ff;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.single_comments_addComment form input:hover {
+    background: transparent;
+    color: #50b5ff;
+    border: 1px solid #50b5ff;
+    padding: 8px 14px;
+}

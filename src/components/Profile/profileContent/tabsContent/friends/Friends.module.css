@@ -1,0 +1,14 @@
+.tab {
+    display: none;
+    color: #000000;
+}
+
+.tabs__content .tab_3 {
+    display: none;
+}
+
+.is_active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}

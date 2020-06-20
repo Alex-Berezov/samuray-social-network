@@ -1,0 +1,92 @@
+.create_post {
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(44, 101, 144, 0.1);
+}
+
+.create_post .create_post_header h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.create_post hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.create_post .input_text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.create_post .input_text .profileAva {
+    width: 19%;
+}
+
+.create_post .input_text .profileAva img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgba(44, 101, 144, 0.1);
+}
+
+.create_post .input_text textarea {
+    width: 79%;
+    height: 50px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.create_post .btns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.create_post .btns input {
+    margin-left: auto;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    background: #50b5ff;
+    padding: 7px 30px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.create_post .btns input:hover {
+    background: transparent;
+    border: 1px solid #50b5ff;
+    color: #50b5ff;
+    padding: 6px 29px;
+}
+
+@media screen and (max-width: 480px) {
+    .create_post .input_text .profileAva {
+        display: none;
+    }
+
+    .create_post .input_text textarea {
+        width: 100%;
+    }
+}

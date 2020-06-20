@@ -1,0 +1,35 @@
+.tab {
+    display: none;
+    color: #000000;
+}
+
+.tab_1 {
+    display: none;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.tab_1 .tab_1_leftSidbar {
+    width: calc(29% - 10px);
+}
+
+.tab_1 .tab_1_timelineContent {
+    width: calc(69% - 10px);
+}
+
+.is_active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@media screen and (max-width: 480px) {
+    .tab_1 .tab_1_leftSidbar {
+        display: none;
+    }
+
+    .tab_1 .tab_1_timelineContent {
+        width: 100%;
+    }
+}

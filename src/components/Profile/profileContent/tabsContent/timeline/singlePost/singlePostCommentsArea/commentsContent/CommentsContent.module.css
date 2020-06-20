@@ -1,0 +1,47 @@
+.single_comments_content {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.single_comments_content .text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.single_comments_content .text p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.single_comments_content .comments_content_footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.single_comments_content .comments_content_footer p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #50b5ff;
+    margin-right: 15px;
+}
+
+.single_comments_content .comments_content_footer p:hover {
+    color: #000000;
+}
+
+.single_comments_content .comments_content_footer .date {
+    color: #a5a9a3;
+    margin-left: auto;
+}
+
+.single_comments_content .comments_content_footer .date:hover {
+    color: #a5a9a3;
+}

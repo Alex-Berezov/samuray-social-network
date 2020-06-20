@@ -1,0 +1,103 @@
+.tab {
+    display: none;
+    color: #000000;
+}
+.tab_2 {
+    display: none;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    background: #ffffff;
+}
+
+.tab_2 .tab_submenu {
+    width: 28%;
+    margin-top: 25px;
+}
+
+.tab_2 .tab_submenu .tab_submenu_item {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab_2 .tab_submenu .is_active {
+    background: #a3d8ff;
+}
+
+.tab_2 .tab_contents {
+    width: 68%;
+}
+
+.tab_2 .tab_contents .tab_content h3 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 21px;
+    color: #000000;
+    margin-top: 30px;
+}
+
+.tab_2 .tab_contents .tab_content hr {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.tab_2 .tab_contents .tab_content .tab_content_info_data {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tab_2 .tab_contents .tab_content .tab_content_info_data .title {
+    width: 28%;
+}
+
+.tab_2 .tab_contents .tab_content .tab_content_info_data .title h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.tab_2 .tab_contents .tab_content .tab_content_info_data .value {
+    width: 68%;
+}
+
+.tab_2 .tab_contents .tab_content .tab_content_info_data .value p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.is_active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@media screen and (max-width: 480px) {
+    .tab_2 .tab_submenu {
+        display: none;
+    }
+
+    .tab_2 .tab_contents {
+        width: 100%;
+    }
+}

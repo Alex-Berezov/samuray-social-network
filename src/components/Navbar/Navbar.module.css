@@ -1,0 +1,36 @@
+.navbarNav ul {
+    padding: 15px;
+    width: 200px;
+}
+
+.navbarNav ul li {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+    padding: 15px 50px 15px 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbarNav ul li a {
+    text-decoration: none;
+    color: #a5a9a3;
+}
+
+.navbarNav ul li a i {
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.navbarNav ul li:hover {
+    color: #50b5ff;
+    background: #f5fbff;
+}
+
+.navbarNav ul li:active {
+    color: #50b5ff;
+    background: #f5fbff;
+}
