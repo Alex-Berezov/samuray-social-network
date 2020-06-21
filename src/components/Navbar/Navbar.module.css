@@ -18,6 +18,7 @@
 .navbarNav ul li a {
     text-decoration: none;
     color: #a5a9a3;
+    padding: 15px 0px 15px 15px;
 }
 
 .navbarNav ul li a i {
@@ -30,7 +31,7 @@
     background: #f5fbff;
 }
 
-.navbarNav ul li:active {
+.navbarNav ul li a.active {
     color: #50b5ff;
     background: #f5fbff;
 }

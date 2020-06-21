@@ -7,7 +7,7 @@ const RightSidebar = () => {
             <div className={classes.friends_online_list_item}>
                 <a href="#">
                     <div className={classes.friends_online_ava}>
-                        <img className={classes.rounde_circle} src="img/Chewbacca.jpg" alt="Chewbacca" />
+                        <img className={classes.rounde_circle} src=".././img/Chewbacca.jpg" alt="Chewbacca" />
                     </div>
                     <div className={classes.friends_online_info}>
                         <p className={classes.name}>Chewbacca</p>
