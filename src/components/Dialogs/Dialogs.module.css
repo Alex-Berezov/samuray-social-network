@@ -1,3 +1,26 @@
-.dialogs_part {
-    text-align: inherit;
+.dialogs_part h2 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 21px;
+}
+
+.dialogs_part .chat {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.dialogs_part .chat .dialogs {
+    width: calc(23% - 15px);
+}
+
+.dialogs_part .chat .verticalHr {
+    border: 2px solid #a5a9a3;
+    height: auto;
+}
+
+.messages {
+    width: calc(73% - 15px);
 }

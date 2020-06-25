@@ -6,6 +6,7 @@ import Friends from './friends/Friends';
 import Photos from './photos/Photos';
 
 const TabsContent = () => {
+
     return (
         <div className={classes.tabs__content}>
             <Timeline />

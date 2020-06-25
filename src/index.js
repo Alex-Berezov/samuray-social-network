@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import state from './state';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+        state={state}
+        // dialogs={dialogs}
+        // message={message}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );

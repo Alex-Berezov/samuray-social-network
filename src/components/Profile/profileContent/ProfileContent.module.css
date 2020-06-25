@@ -1,3 +1,9 @@
 .profile_menu {
     margin-top: 15px;
 }
+
+.tabs__nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}

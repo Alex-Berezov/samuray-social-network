@@ -5,14 +5,15 @@ import SinglePostContent from './singlePostContent/SinglePostContent';
 import SinglePostInfo from './singlePostInfo/SinglePostInfo';
 import SinglePostCommentsArea from './singlePostCommentsArea/SinglePostCommentsArea';
 
-const SinglePost = () => {
+const SinglePost = (props) => {
+
+
     return (
         <div className={classes.single_post}>
             <SinglePostHeader />
             <SinglePostContent />
             <SinglePostInfo />
             <hr />
-            <SinglePostCommentsArea />
         </div>
     );
 }

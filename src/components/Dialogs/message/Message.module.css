@@ -1,0 +1,10 @@
+.message p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 10px;
+    background: #f5fbff;
+    margin-bottom: 15px;
+}

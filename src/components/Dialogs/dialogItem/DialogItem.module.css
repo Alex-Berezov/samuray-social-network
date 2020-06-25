@@ -1,0 +1,51 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.dialog {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.dialog:hover p {
+    color: #50b5ff;
+}
+
+.active {
+    background: #c2e3fb40;
+    border-radius: 10px;
+}
+
+.dialog .friends_online_ava {
+    width: calc(27% - 10px);
+    margin-right: 15px;
+    position: relative;
+}
+
+.dialog .friends_online_ava .rounde_circle {
+    border-radius: 50% !important;
+}
+
+.dialog .friends_online_ava:before {
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    z-index: 1;
+    border: 2px solid #ffffff;
+    background-color: green;
+    height: 16px;
+    width: 16px;
+    right: 0;
+    bottom: -3px;
+}
+
+.dialog p {
+    width: calc(67% - 10px);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+}

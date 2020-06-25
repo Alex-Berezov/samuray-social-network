@@ -1,19 +1,19 @@
 import React from 'react';
 import classes from './SinglePostInfo.module.css';
 
-const SinglePostInfo = () => {
+const SinglePostInfo = (props) => {
     return (
         <div className={classes.single_post_info}>
             <div className={classes.likes}>
                 <i className="far fa-thumbs-up"></i>
-                <p>140 likes</p>
+                <p>148 likes</p>
             </div>
             <div className={classes.comments}>
-                <p>20 comment</p>
+                <p>22 comment</p>
             </div>
             <div className={classes.share}>
                 <i className="fas fa-share-alt"></i>
-                <p>99 Share</p>
+                <p>11 Share</p>
             </div>
         </div>
     );

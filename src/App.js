@@ -14,7 +14,8 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 
-const App = () => {
+const App = (props) => {
+
     return (
         <BrowserRouter>
             <div>
@@ -32,15 +33,19 @@ const App = () => {
                             </aside>
 
                             <div className="content_part">
-                                <Route path='/Profile' component={Profile} />
-                                <Route path='/Dialogs' component={Dialogs} />
-                                <Route path='/Newsfeed' component={Newsfeed} />
-                                <Route path='/Music' component={Music} />
-                                <Route path='/Settings' component={Settings} />
+                                <Route path='/Profile' render={ () => <Profile
+                                    state={ props.state.profilePage }/>}
+                                />
+                                <Route path='/Dialogs' render={ () => <Dialogs
+                                    state={ props.state.dialogsPage } />}
+                                />
+                                <Route path='/Newsfeed' render={ () => <Newsfeed />} />
+                                <Route path='/Music' render={ () => <Music />} />
+                                <Route path='/Settings' render={ () => <Settings />} />
                             </div>
 
                             <aside className="right_sidebar">
-                                <RightSidebar/>
+                                <RightSidebar state={ props.state.RightSidebarPart } />
                             </aside>
 
                         </div>

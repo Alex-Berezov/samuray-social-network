@@ -1,10 +1,4 @@
-.tabs__nav {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-}
-
-.tabs__nav .tabs_nav__item {
+.tabs_nav__item {
     width: 25%;
     text-align: center;
     padding: 20px 15px;
@@ -18,14 +12,14 @@
     cursor: pointer;
 }
 
-.tabs__nav .is_active {
+.is_active {
     color: #ffffff;
     background: #50b5ff;
     border-radius: 5px;
 }
 
 @media screen and (max-width: 480px) {
-    .tabs__nav .tabs-nav__item {
+    .tabs-nav__item {
         font-size: 14px;
         padding: 10px 5px;
     }
