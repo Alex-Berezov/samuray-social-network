@@ -10,3 +10,129 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.single_post_header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.single_post_header .single_post_header_foto a img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.single_post_header .single_post_header_title {
+    margin-left: 15px;
+}
+
+.single_post_header .single_post_header_title h6 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.single_post_header .single_post_header_title h6 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.single_post_header .single_post_header_title p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #a5a9a3;
+}
+
+.single_post_content {
+    margin-top: 15px;
+}
+
+.single_post_content p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.single_post_content img {
+    width: 100%;
+    height: auto;
+}
+
+.single_post_info {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.single_post_info .likes {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.single_post_info .likes i {
+    margin-right: 10px;
+    color: #50b5ff;
+}
+
+.single_post_info .likes p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}
+
+.single_post_info .comments {
+    margin-left: 15px;
+}
+
+.single_post_info .comments p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}
+
+.single_post_info .share {
+    margin-left: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.single_post_info .share i {
+    margin-right: 10px;
+    color: #50b5ff;
+}
+
+.single_post_info .share p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}

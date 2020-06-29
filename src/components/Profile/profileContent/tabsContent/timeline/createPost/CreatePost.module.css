@@ -58,7 +58,7 @@
     display: flex;
 }
 
-.create_post .btns input {
+.create_post .btns button {
     margin-left: auto;
     font-family: 'Raleway';
     font-style: normal;
@@ -74,7 +74,7 @@
     border-radius: 5px;
 }
 
-.create_post .btns input:hover {
+.create_post .btns button:hover {
     background: transparent;
     border: 1px solid #50b5ff;
     color: #50b5ff;

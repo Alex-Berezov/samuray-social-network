@@ -12,12 +12,12 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import Newsfeed from "./components/Newsfeed/Newsfeed";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import state, {addNewMessage, addPost, updateNewMessageText, updateNewPostText} from "./redux/store";
 
 
 const App = (props) => {
 
     return (
-        <BrowserRouter>
             <div>
                 <header>
                     <Header/>
@@ -34,10 +34,14 @@ const App = (props) => {
 
                             <div className="content_part">
                                 <Route path='/Profile' render={ () => <Profile
-                                    state={ props.state.profilePage }/>}
+                                    state={ props.state }
+                                    dispatch={ props.dispatch }
+                                    />}
                                 />
                                 <Route path='/Dialogs' render={ () => <Dialogs
-                                    state={ props.state.dialogsPage } />}
+                                    state={ props.state.dialogsPage }
+                                    dispatch={ props.dispatch }
+                                    />}
                                 />
                                 <Route path='/Newsfeed' render={ () => <Newsfeed />} />
                                 <Route path='/Music' render={ () => <Music />} />
@@ -57,9 +61,7 @@ const App = (props) => {
                 <footer>
                     <Footer/>
                 </footer>
-
             </div>
-        </BrowserRouter>
     );
 }
 

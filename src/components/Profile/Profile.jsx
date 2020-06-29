@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Profile.module.css';
 import MainCard from './mainCard/mainCard';
 import ProfileContent from './profileContent/ProfileContent';
+import state, {updateNewPostText} from "../../redux/store";
 
 const Profile = (props) => {
 
@@ -9,7 +10,8 @@ const Profile = (props) => {
         <section className={classes.profile_part}>
             <MainCard />
             <ProfileContent
-                state={props.state.tabsNav}
+                state={props.state}
+                dispatch={ props.dispatch }
             />
         </section>
     );
