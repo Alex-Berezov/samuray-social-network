@@ -3,17 +3,19 @@ import classes from './Timeline.module.css';
 import LeftSidbarPhotos from './leftSidbarPhotos/LeftSidbarPhotos';
 import CreatePost from './createPost/CreatePost';
 import SinglePost from './singlePost/SinglePost';
-import {updateNewPostText} from "../../../../../redux/store";
+import CreatePostContainer from "./createPost/CreatePostContainer";
 
 const Timeline = (props) => {
 
-    let singlePost = props.state.profilePage.SinglePostContent.map( post => <SinglePost
-        name={post.singlePostUserName}
-        post={post.singlePostText}
-        id={post.id}
-        likes={post.likesCount}
-        comments={post.commentsCount}
-        share={post.shareCount}
+    let state = props.profilePage;
+    let singlePost = state.SinglePostContent.map( post => <SinglePost
+        name={ post.singlePostUserName }
+        post={ post.singlePostText }
+        id={ post.id }
+        likes={ post.likesCount }
+        comments={ post.commentsCount }
+        share={ post.shareCount }
+        key={ post.id }
     /> );
 
     return (
@@ -22,10 +24,7 @@ const Timeline = (props) => {
                 <LeftSidbarPhotos />
             </div>
             <div className={classes.tab_1_timelineContent}>
-                <CreatePost
-                    state={props.state}
-                    dispatch={ props.dispatch }
-                />
+                <CreatePostContainer />
                 { singlePost }
             </div>
         </div>

@@ -3,8 +3,7 @@ import classes from './RightSidebar.module.css';
 import FriendsOnline from "./friendsOnline/FriendsOnline";
 
 const RightSidebar = (props) => {
-
-    let friendsOnlineList = props.state.friendOnline.map((friend, index) => {
+    let friendsOnlineList = props.friendOnline.map((friend, index) => {
        return (
            <FriendsOnline
                key={ index }

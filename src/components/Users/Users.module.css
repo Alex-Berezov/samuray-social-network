@@ -1,0 +1,106 @@
+
+.users_block .single_user {
+    display: flex;
+    margin-bottom: 15px;
+}
+.users_block .single_user .left_part {
+    display: flex;
+    flex-direction: column;
+    width: calc(14% - 10px);
+}
+.users_block .single_user .left_part .user_photo {
+    max-width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}
+.users_block .single_user .left_part .user_photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.users_block .single_user .left_part .follow_btn {
+    margin: 15px auto 0px;
+}
+.users_block .single_user .left_part .follow_btn button {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    background: #50b5ff;
+    padding: 7px 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.users_block .single_user .left_part .follow_btn button:hover {
+    background: transparent;
+    border: 1px solid #50b5ff;
+    color: #50b5ff;
+    padding: 6px 19px;
+}
+.users_block .single_user .right_part {
+    width: calc(84% - 10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #a5a9a3;
+    border-radius: 5px;
+}
+.users_block .single_user .right_part .user_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.users_block .single_user .right_part .user_info h3 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    color: black;
+}
+.users_block .single_user .right_part .user_info p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+}
+.users_block .single_user .right_part .user_location .user_city {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}
+.users_block .single_user .right_part .user_location .user_country {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #a5a9a3;
+}
+.paginationBlock {
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+}
+.paginationBlockItem {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.selectedPage {
+    font-weight: bold;
+}

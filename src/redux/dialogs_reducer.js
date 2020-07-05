@@ -1,17 +1,40 @@
 const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE_NEW_MESSAGE_TEXT';
 
-const dialogsReducer = (state, action) => {
+let initialState = {
+    dialogs: [
+        {id: 1, name: 'Chewbacca'},
+        {id: 2, name: 'Han Solo'},
+        {id: 3, name: 'Princes Leia'}
+    ],
+    messages: [
+        {id: 0, message: 'Some messages #1'},
+        {id: 1, message: 'Some message #2'},
+        {id: 2, message: 'Some message #3'}
+    ],
+    newMessageText: ''
+};
+
+const dialogsReducer = (state = initialState, action) => {
+
     switch (action.type) {
-        case ADD_NEW_MESSAGE:
+        case ADD_NEW_MESSAGE: {
             let newMessage = {
                 message: state.newMessageText
             };
-            state.messages.push(newMessage);
-            return state;
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.addNewMessage;
-            return state;
+            return {
+                ...state,
+                messages: [...state.messages, newMessage],
+                newMessageText: ''
+            };
+        }
+        case UPDATE_NEW_MESSAGE_TEXT: {
+            return {
+                ...state,
+                messages: [...state.messages],
+                newMessageText: action.addNewMessage
+            };
+        }
         default:
             return state;
     }

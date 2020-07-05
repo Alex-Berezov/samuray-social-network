@@ -1,19 +1,18 @@
 import React from 'react';
 import classes from './CreatePost.module.css';
-import {addPostActionCreator, handlePostChangeActionCreator} from "../../../../../../redux/profile_reducer";
 
 const CreatePost = (props) => {
 
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        props.dispatch( addPostActionCreator() );
-        newPostElement.current.value = '';
+        props.addPost();
+        //newPostElement.current.value = '';
     };
 
-    let handlePostChange = () => {
-        let newPost = newPostElement.current.value;
-        props.dispatch( handlePostChangeActionCreator(newPost) );
+    let handlePostChange = (event) => {
+        let newPost = event.target.value;
+        props.onHandlePostChange(newPost);
     };
 
     return (

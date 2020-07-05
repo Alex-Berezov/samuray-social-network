@@ -13,6 +13,12 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink to="/users" activeClassName={classes.active}>
+                        <i className="far fa-user"></i>
+                        Users
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink to="/dialogs" activeClassName={classes.active}>
                         <i className="far fa-envelope-open"></i>
                         Messages
