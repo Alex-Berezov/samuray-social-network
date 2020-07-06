@@ -13,7 +13,6 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import RightSidebarContainer from "./components/RightSidebar/RightSidebarContainer";
-import Users from "./components/Users/Users";
 import UsersContainer from "./components/Users/UsersContsiner";
 
 

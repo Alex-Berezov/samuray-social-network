@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './CreatePost.module.css';
+import LukeSkywalker from '../../../../../../assets/img/LukeSkywalker.jpg';
 
 const CreatePost = (props) => {
 
@@ -7,7 +8,6 @@ const CreatePost = (props) => {
 
     let addPost = () => {
         props.addPost();
-        //newPostElement.current.value = '';
     };
 
     let handlePostChange = (event) => {
@@ -23,7 +23,7 @@ const CreatePost = (props) => {
             <hr />
             <div className={classes.input_text}>
                 <div className={classes.profileAva}>
-                    <img src="img/LukeSkywalker.jpg" alt="LukeSkywalker" />
+                    <img src={LukeSkywalker} alt="LukeSkywalker" />
                 </div>
                 <textarea
                     ref={ newPostElement }

@@ -1,20 +1,21 @@
 import React from 'react';
 import classes from './SinglePost.module.css';
 import SinglePostCommentsArea from './singlePostCommentsArea/SinglePostCommentsArea';
+import LukeSkywalker from '../../../../../../assets/img/LukeSkywalker.jpg';
 
 const SinglePost = (props) => {
 
     return (
         <div className={classes.single_post}>
             <div className={classes.single_post_header}>
-                {/*<div className={classes.single_post_header_foto}>*/}
-                {/*    <a href="#">*/}
-                {/*        <img src="img/LukeSkywalker.jpg" alt="LukeSkywalker" />*/}
-                {/*    </a>*/}
-                {/*</div>*/}
+                <div className={classes.single_post_header_foto}>
+                    <a href="#">
+                        <img src={LukeSkywalker} alt="LukeSkywalker" />
+                    </a>
+                </div>
                 <div className={classes.single_post_header_title}>
                     <h6><a href="#">{ props.name }</a></h6>
-                    {/*<p className={classes.post_date}>XX hour ago</p>*/}
+                    <p className={classes.post_date}>XX hour ago</p>
                 </div>
             </div>
             <div className={classes.single_post_content}>

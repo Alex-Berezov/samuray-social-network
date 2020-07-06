@@ -1,5 +1,14 @@
 import React from 'react';
 import classes from './LeftSidbarPhotos.module.css';
+import luke_img_1 from '../../../../../../assets/img/luke_img_1.jpg';
+import luke_img_2 from '../../../../../../assets/img/luke_img_2.jpg';
+import luke_img_3 from '../../../../../../assets/img/luke_img_3.jpg';
+import luke_img_4 from '../../../../../../assets/img/luke_img_4.jpg';
+import luke_img_5 from '../../../../../../assets/img/luke_img_5.jpg';
+import luke_img_6 from '../../../../../../assets/img/luke_img_6.jpg';
+import luke_img_7 from '../../../../../../assets/img/luke_img_7.jpg';
+import luke_img_8 from '../../../../../../assets/img/luke_img_8.jpg';
+import luke_img_9 from '../../../../../../assets/img/luke_img_9.jpg';
 
 const LeftSidbarPhotos = () => {
     return (
@@ -11,15 +20,15 @@ const LeftSidbarPhotos = () => {
             <hr />
             <div className={classes.gallary}>
                 <ul>
-                    <li><a href="#"><img src="img/luke_img_1.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_2.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_3.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_4.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_5.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_6.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_7.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_8.jpg" alt="" /></a></li>
-                    <li><a href="#"><img src="img/luke_img_9.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_1} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_2} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_3} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_4} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_5} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_6} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_7} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_8} alt="" /></a></li>
+                    <li><a href="#"><img src={luke_img_9} alt="" /></a></li>
                 </ul>
             </div>
         </div>

@@ -1,8 +1,12 @@
+import Chewbacca from '../assets/img/Chewbacca.jpg';
+import Solo from '../assets/img/Solo.jpg';
+import Leia from '../assets/img/Leia.jpg';
+
 let initialState = {
     friendOnline: [
-        {image: "img/Chewbacca.jpg", name: 'Chewbacca', role: 'Friend'},
-        {image: "img/Solo.jpg", name: 'Han Solo', role: 'Friend'},
-        {image: "img/Leia.jpg", name: 'Princes Leia', role: 'Friend'}
+        {image: Chewbacca, name: 'Chewbacca', role: 'Friend'},
+        {image: Solo, name: 'Han Solo', role: 'Friend'},
+        {image: Leia, name: 'Princes Leia', role: 'Friend'}
     ]
 };
 

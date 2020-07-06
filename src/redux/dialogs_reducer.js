@@ -1,11 +1,15 @@
+import Chewbacca from '../assets/img/Chewbacca.jpg';
+import Solo from '../assets/img/Solo.jpg';
+import Leia from '../assets/img/Leia.jpg';
+
 const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE_NEW_MESSAGE_TEXT';
 
 let initialState = {
     dialogs: [
-        {id: 1, name: 'Chewbacca'},
-        {id: 2, name: 'Han Solo'},
-        {id: 3, name: 'Princes Leia'}
+        {id: 1, name: 'Chewbacca', img: Chewbacca},
+        {id: 2, name: 'Han Solo', img: Solo},
+        {id: 3, name: 'Princes Leia', img: Leia}
     ],
     messages: [
         {id: 0, message: 'Some messages #1'},
@@ -40,13 +44,13 @@ const dialogsReducer = (state = initialState, action) => {
     }
 };
 
-export const addNewMessageActionCreator = () => {
+export const sendNewMessage = () => {
     return {
         type: ADD_NEW_MESSAGE
     };
 };
 
-export const handleMessageChangeActionCreator = (addNewMessage) => {
+export const updateNewMessageText = (addNewMessage) => {
     return {
         type: UPDATE_NEW_MESSAGE_TEXT,
         addNewMessage: addNewMessage
