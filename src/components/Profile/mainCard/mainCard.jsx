@@ -3,11 +3,12 @@ import classes from './MainCard.module.css';
 import CoverAva from './coverAva/CoverAva';
 import CardFooter from './cardFooter/CardFooter';
 
-const MainCard = () => {
+const MainCard = (props) => {
+
     return (
         <div className={classes.main_card}>
-            <CoverAva />
-            <CardFooter />
+            <CoverAva profile={props.profile} />
+            <CardFooter profile={props.profile} />
         </div>
     );
 }

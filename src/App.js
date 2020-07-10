@@ -1,11 +1,8 @@
-import React, {Profiler} from 'react';
+import React from 'react';
 import {Route} from "react-router-dom";
 import './App.css';
 import './assets/fonts/fonts.css';
 import './fontawesome-free-5.13.0-web/css/all.css';
-import Header from './components/Header/Header';
-import Profile from './components/Profile/Profile';
-import RightSidebar from './components/RightSidebar/RightSidebar';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Newsfeed from "./components/Newsfeed/Newsfeed";
@@ -14,6 +11,8 @@ import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import RightSidebarContainer from "./components/RightSidebar/RightSidebarContainer";
 import UsersContainer from "./components/Users/UsersContsiner";
+import ProfileContainer from "./components/Profile/ProfileContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 
 const App = (props) => {
@@ -21,7 +20,7 @@ const App = (props) => {
     return (
             <div>
                 <header>
-                    <Header/>
+                    <HeaderContainer />
                 </header>
 
                 <main>
@@ -34,7 +33,7 @@ const App = (props) => {
                             </aside>
 
                             <div className="content_part">
-                                <Route path='/Profile' render={ () => <Profile />}
+                                <Route path='/Profile/:userId?' render={ () => <ProfileContainer />}
                                 />
                                 <Route path='/Dialogs' render={ () => <DialogsContainer />}
                                 />

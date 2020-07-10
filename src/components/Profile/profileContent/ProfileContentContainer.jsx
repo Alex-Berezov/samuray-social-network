@@ -4,6 +4,7 @@ import ProfileContent from "./ProfileContent";
 
 
 const mapStateToProps = (state) => {
+
     return {
         profilePage: state.profilePage
     };

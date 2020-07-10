@@ -1,12 +1,17 @@
 import React from "react";
 import classes from "./Users.module.css";
 import userPhoto from "../../assets/img/logo.jpg";
+import {NavLink} from "react-router-dom";
+import {getAPI} from "../../api/api";
 
 let Users = (props) => {
+
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i);
+        if (pages.length < 10) {
+            pages.push(i);
+        }
     }
 
     return <div>
@@ -15,12 +20,18 @@ let Users = (props) => {
                     <div className={classes.single_user}>
                         <div className={classes.left_part}>
                             <div className={classes.user_photo}>
-                                <img src={ user.photos.small != null ? user.photos.small : userPhoto }  />
+                                <NavLink to={'/profile/' + user.id}>
+                                    <img src={ user.photos.small != null ? user.photos.small : userPhoto }  />
+                                </NavLink>
                             </div>
                             <div className={classes.follow_btn}>
                                 { user.followed
-                                    ? <button onClick={ () => { props.unfollow(user.id) } }>Unfollow</button>
-                                    : <button onClick={ () => { props.follow(user.id) } }>Follow</button> }
+                                    ? <button disabled={props.followingInProgress.some(id => id === user.id)}
+                                              onClick={ () => { props.unfollow(user.id);
+                                    } }>Unfollow</button>
+                                    : <button disabled={props.followingInProgress.some(id => id === user.id)}
+                                              onClick={ () => { props.follow(user.id);
+                                    } }>Follow</button> }
                             </div>
                         </div>
                         <div className={classes.right_part}>
