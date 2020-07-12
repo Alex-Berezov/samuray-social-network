@@ -8,6 +8,9 @@ import {
 } from "../../redux/users_reducer";
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
+import {Redirect} from "react-router-dom";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -19,6 +22,7 @@ class UsersContainer extends React.Component {
     }
 
     render() {
+
         return <>
             { this.props.isFetching ? <Preloader /> : null }
             <Users totalUsersCount={ this.props.totalUsersCount }
@@ -42,39 +46,19 @@ const mapStateToProps = (state) => {
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
         isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress
+        followingInProgress: state.usersPage.followingInProgress,
+        isAuth: state.auth.isAuth
     };
 };
 
-//Old mapDispatchToProps
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch( followAC(userId) );
-//         },
-//         unfollow: (userId) => {
-//             dispatch( unfollowAC(userId) );
-//         },
-//         setCurrentPage: (pageNumber) => {
-//             dispatch( setCurrentPageAC(pageNumber) );
-//         },
-//         setUsers: (users) => {
-//             dispatch( setUsersAC(users) );
-//         },
-//         setTotalUsersCount: (totalCount) => {
-//             dispatch( setTotalUsersCountAC(totalCount) );
-//         },
-//         toggleIsFetching: (isFetching) => {
-//             dispatch(toggleIsFetchingAC(isFetching));
-//         }
-//     };
-// };
-
-export default connect(mapStateToProps,
-    {
-        follow,
-        unfollow,
-        setCurrentPage,
-        toggleFollowingProgress,
-        getUsers: getUsers
-    })(UsersContainer);
+export default compose(
+    connect(mapStateToProps,
+        {
+            follow,
+            unfollow,
+            setCurrentPage,
+            toggleFollowingProgress,
+            getUsers: getUsers
+        }),
+    withAuthRedirect
+)(UsersContainer);

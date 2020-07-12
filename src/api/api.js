@@ -1,5 +1,4 @@
 import * as axios from "axios";
-import {toggleFollowingProgress} from "../redux/users_reducer";
 
 const instance = axios.create({
     withCredentials: true,
@@ -10,6 +9,7 @@ const instance = axios.create({
 });
 
 export const getAPI = {
+
     getUsers(currentPage, pageSize) {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
             .then(response => {

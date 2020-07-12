@@ -18,18 +18,18 @@ const authReducer = (state = initialState, action) => {
                 isAuth: true
             }
         default:
-            return {state}
+            return state;
     }
 }
 
-export const setAuthUserData = (userId, email, login) => ({type: SET_USER_DATA, data: {userId, email, login}});
+export const setAuthUserData = (data) => ({type: SET_USER_DATA, data});
 
 export const getAuthUserData = () => (dispatch) => {
     getAPI.getAuth()
         .then(response => {
-            if (response.data.resaltCode === 0) {
-                let {id, email, login} = response.data.data;
-                dispatch(setAuthUserData(id, email, login));
+            if (response.data.resultCode === 0) {
+                let data = response.data.data;
+                dispatch(setAuthUserData(data));
             }
         });
 }

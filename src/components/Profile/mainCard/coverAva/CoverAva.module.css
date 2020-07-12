@@ -16,6 +16,7 @@
     height: 400px;
     width: 100%;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .main_card_cover_ava .img_ava {
@@ -53,6 +54,15 @@
 }
 
 .main_card_cover_ava .img_ava p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 30px;
+}
+
+.main_card_cover_ava .img_ava input {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;

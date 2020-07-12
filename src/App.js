@@ -13,6 +13,7 @@ import RightSidebarContainer from "./components/RightSidebar/RightSidebarContain
 import UsersContainer from "./components/Users/UsersContsiner";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 
 const App = (props) => {
@@ -41,6 +42,7 @@ const App = (props) => {
                                 <Route path='/Newsfeed' render={ () => <Newsfeed />} />
                                 <Route path='/Music' render={ () => <Music />} />
                                 <Route path='/Settings' render={ () => <Settings />} />
+                                <Route path='/login' render={ () => <Login />} />
                             </div>
 
                             <aside className="right_sidebar">

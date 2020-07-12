@@ -2,6 +2,7 @@ import React, {RefObject as newMessageElement} from 'react';
 import classes from './Dialogs.module.css';
 import DialogItem from "./dialogItem/DialogItem";
 import Message from "./message/Message";
+import {Redirect} from "react-router-dom";
 
 const Dialogs = (props) => {
 
