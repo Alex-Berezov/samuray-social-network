@@ -1,19 +1,42 @@
 import React from 'react';
 import classes from './CreatePost.module.css';
 import LukeSkywalker from '../../../../../../assets/img/LukeSkywalker.jpg';
+import {Field, reduxForm} from "redux-form";
+import {maxLength1500, minLength2, required} from "../../../../../../utils/validators/validators";
+import {Textarea} from "../../../../../common/FormsControls/FormsControls";
+
+const createNewPostForm = props => {
+    const { handleSubmit } = props
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <div className={classes.input_text}>
+                <div className={classes.profileAva}>
+                    <img src={LukeSkywalker} alt="LukeSkywalker" />
+                </div>
+                <Field
+                    component={Textarea}
+                    type='textarea'
+                    name='newPostText'
+                    label='Write your post here...'
+                    validate={[maxLength1500, minLength2]}
+                />
+            </div>
+            <hr />
+            <div className={classes.btns}>
+                <button type={'submit'}>Post</button>
+            </div>
+        </form>
+    );
+}
+
+const AddNewPostReduxForm = reduxForm({form: 'profileAddNewPostForm'})(createNewPostForm);
 
 const CreatePost = (props) => {
 
-    let newPostElement = React.createRef();
-
-    let addPost = () => {
-        props.addPost();
-    };
-
-    let handlePostChange = (event) => {
-        let newPost = event.target.value;
-        props.onHandlePostChange(newPost);
-    };
+    const addPost = (values) => {
+        props.addPost(values.newPostText);
+    }
 
     return (
         <div className={classes.create_post}>
@@ -21,21 +44,7 @@ const CreatePost = (props) => {
                 <h5>Create post</h5>
             </div>
             <hr />
-            <div className={classes.input_text}>
-                <div className={classes.profileAva}>
-                    <img src={LukeSkywalker} alt="LukeSkywalker" />
-                </div>
-                <textarea
-                    ref={ newPostElement }
-                    placeholder="Write your post here..."
-                    value={ props.newPostText }
-                    onChange={ handlePostChange }
-                />
-            </div>
-            <hr />
-            <div className={classes.btns}>
-                <button onClick={ addPost }>Post</button>
-            </div>
+            <AddNewPostReduxForm onSubmit={addPost} />
         </div>
     );
 }

@@ -2,7 +2,8 @@ import React from 'react';
 
 class ProfileStatus extends React.Component {
     state = {
-        editMode: false
+        editMode: false,
+        status: this.props.status
     }
 
     activateEditMode = () => {
@@ -15,19 +16,33 @@ class ProfileStatus extends React.Component {
         this.setState({
             editMode: false
         });
+        this.props.updateStatus(this.state.status);
+    }
+
+    onStatusChange = (e) => {
+        this.setState({
+            status: e.currentTarget.value
+        });
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.status !== this.props.status) {
+            this.setState({
+                status: this.props.status
+            });
+        }
     }
 
     render() {
         return (
             <div>
                 {!this.state.editMode
-                    ? <div><p
-                    onDoubleClick={ this.activateEditMode }
-                    >{this.props.status}</p></div>
+                    ? <p onClick={ this.activateEditMode }>{this.props.status || 'No status yet'}</p>
                     : <div><input
+                        onChange={this.onStatusChange}
                         onBlur={ this.deactivateEditMode }
                         autoFocus={true}
-                        value={this.props.status} /></div>
+                        value={this.state.status} /></div>
                 }
             </div>
         );

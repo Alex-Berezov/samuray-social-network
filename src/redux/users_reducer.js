@@ -1,4 +1,4 @@
-import {getAPI} from "../api/api";
+import {usersAPI} from "../api/api";
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -15,33 +15,6 @@ let initialState = {
     currentPage: 1,
     isFetching: true,//Process getting data from server
     followingInProgress: []
-    //Old setUsers with right data
-    // props.setUsers([
-    //     {
-    //         userId: 0,
-    //         photoUrl: 'https://im0-tub-ru.yandex.net/i?id=7e924d390e9a3d1a0609eec2e44d4247-sr&n=13',
-    //         followed: false,
-    //         userName: 'Luke Skywalker',
-    //         userStatus: 'May the horse be with you',
-    //         userLocation: {city: 'Erevan', country: 'Armenia'}
-    //     },
-    //     {
-    //         userId: 1,
-    //         photoUrl: 'https://www.journaldemickey.com/sites/default/files/dico/han-solo-star-wars.jpg',
-    //         followed: true,
-    //         userName: 'Han Solo',
-    //         userStatus: 'Some status here',
-    //         userLocation: {city: 'Moscow', country: 'Russia'}
-    //     },
-    //     {
-    //         userId: 2,
-    //         photoUrl: 'https://i.quotev.com/img/q/u/17/12/28/sxlgi2bsy4.jpg',
-    //         followed: false,
-    //         userName: 'Princes Leia',
-    //         userStatus: 'I am hot!',
-    //         userLocation: {city: 'Tel-Aviv', country: 'Israel'}
-    //     }
-    // ]);
 };
 
 const UsersReducer = (state = initialState, action) => {
@@ -98,7 +71,7 @@ export const toggleFollowingProgress = (isFetching, userId) => ({type: TOGGLE_IS
 export const getUsers = (currentPage, pageSize) => {
     return (dispatch) => {
         dispatch(toggleIsFetching(true));
-        getAPI.getUsers(currentPage, pageSize).then(data => {
+        usersAPI.getUsers(currentPage, pageSize).then(data => {
             dispatch(toggleIsFetching(false));
             dispatch(setUsers(data.items));
             dispatch(setTotalUsersCount(data.totalCount));
@@ -109,7 +82,7 @@ export const getUsers = (currentPage, pageSize) => {
 export const follow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));//Do not working
-        getAPI.follow(userId)
+        usersAPI.follow(userId)
             .then(response => {
                 if (response.data.resultCode === 0) {
                     dispatch(followSuccess(userId));
@@ -122,7 +95,7 @@ export const follow = (userId) => {
 export const unfollow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));//Do not working
-        getAPI.unfollow(userId)
+        usersAPI.unfollow(userId)
             .then(response => {
                 if (response.data.resultCode === 0) {
                     dispatch(unfollowSuccess(userId));

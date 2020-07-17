@@ -1,8 +1,33 @@
-import React, {RefObject as newMessageElement} from 'react';
+import React from 'react';
 import classes from './Dialogs.module.css';
 import DialogItem from "./dialogItem/DialogItem";
 import Message from "./message/Message";
-import {Redirect} from "react-router-dom";
+import {Field, reduxForm} from "redux-form";
+import {Textarea} from "../common/FormsControls/FormsControls";
+import {maxLength1500, minLength2} from "../../utils/validators/validators";
+
+const AddNewMessageForm = props => {
+    const { handleSubmit } = props
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <div className={classes.addNewMessage}>
+                <Field
+                    component={Textarea}
+                    type='textarea'
+                    name='newMessageText'
+                    label='Write your message here...'
+                    validate={[maxLength1500, minLength2]}
+                />
+            </div>
+            <div className={classes.addNewMessageBtn}>
+                <button type='submit'>Send</button>
+            </div>
+        </form>
+    );
+}
+
+const AddNewMessageReduxForm = reduxForm({form: 'dialogAddNewMessageForm'})(AddNewMessageForm);
 
 const Dialogs = (props) => {
 
@@ -18,16 +43,9 @@ const Dialogs = (props) => {
         key={ message.id }
     /> );
 
-    let newMessageElement = React.createRef();
-
-    let addNewMessage = () => {
-        props.sendNewMessage();
-    };
-
-    let handleMessageChange = (event) => {
-        let text = event.target.value;
-        props.updateNewMessageText(text);
-    };
+    const addNewMessage = (values) => {
+        props.sendNewMessage(values.newMessageText);
+    }
 
     return (
         <section className={classes.dialogs_part}>
@@ -39,18 +57,7 @@ const Dialogs = (props) => {
                 <div className={classes.verticalHr}></div>
                 <div className={classes.messages}>
                     { messagesElems }
-
-                    <div className={classes.addNewMessage}>
-                        <textarea
-                            ref={ newMessageElement }
-                            placeholder="Write your post here..."
-                            value={ props.newMessageText }
-                            onChange={ handleMessageChange }
-                        />
-                    </div>
-                    <div className={classes.addNewMessageBtn}>
-                        <button onClick={ addNewMessage }>Send</button>
-                    </div>
+                    <AddNewMessageReduxForm onSubmit={addNewMessage} />
                 </div>
             </div>
         </section>

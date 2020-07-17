@@ -17,8 +17,7 @@ const CoverAva = (props) => {
             <div className={classes.img_ava}>
                 <img src={props.profile.photos.large} alt="" />
                 <h2>{props.profile.fullName}</h2>
-                {/*<p>{props.profile.aboutMe}</p>*/}
-                <ProfileStatus status={'Hello my friends'} />
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
             </div>
         </div>
     );

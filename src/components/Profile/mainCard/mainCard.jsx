@@ -7,7 +7,11 @@ const MainCard = (props) => {
 
     return (
         <div className={classes.main_card}>
-            <CoverAva profile={props.profile} />
+            <CoverAva
+                profile={props.profile}
+                status={props.status}
+                updateStatus={props.updateStatus}
+            />
             <CardFooter profile={props.profile} />
         </div>
     );

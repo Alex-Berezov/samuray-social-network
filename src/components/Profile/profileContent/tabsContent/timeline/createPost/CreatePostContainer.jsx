@@ -1,30 +1,25 @@
 import React from 'react';
-import {addPost, onHandlePostChange} from "../../../../../../redux/profile_reducer";
 import CreatePost from "./CreatePost";
 import {connect} from "react-redux";
+import {addPost} from "../../../../../../redux/profile_reducer";
+import {withAuthRedirect} from "../../../../../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 const mapStateToProps = (state) => {
     return {
-        newPostText: state.profilePage.newPostText,
         profilePage: state.profilePage
     };
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         onHandlePostChange: (newPost) => {
-//             dispatch( handlePostChangeActionCreator(newPost) );
-//         },
-//         addPost: () => {
-//             dispatch( addPostActionCreator() );
-//         }
-//     };
-// };
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: (newPostText) => {
+            dispatch( addPost(newPostText) );
+        }
+    };
+};
 
-const CreatePostContainer = connect(mapStateToProps,
-    {
-        onHandlePostChange,
-        addPost
-    })(CreatePost);
-
-export default CreatePostContainer;
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect
+)(CreatePost);

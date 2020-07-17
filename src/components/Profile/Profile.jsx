@@ -7,7 +7,11 @@ const Profile = (props) => {
 
     return (
         <section className={classes.profile_part}>
-            <MainCard profile={props.profile} />
+            <MainCard
+                profile={props.profile}
+                status={props.status}
+                updateStatus={props.updateStatus}
+            />
             <ProfileContentContainer profile={props.profile} />
         </section>
     );
