@@ -4,7 +4,6 @@ import {NavLink} from 'react-router-dom';
 import logo from '../../assets/img/logo.jpg';
 
 const Header = (props) => {
-    console.log(props);
     return (
         <section className={classes.header}>
             <div className={classes.wrapper}>
@@ -25,7 +24,7 @@ const Header = (props) => {
                 <div className={classes.right_part}>
                     <div className={classes.login_block}>
                         { props.isAuth
-                            ? <p>{props.login}</p>
+                            ? <p>{props.login} <button onClick={props.logout}>Logout</button></p>
                             : <NavLink to={'/login'}>Login</NavLink> }
                     </div>
                     <div className={classes.notifications}>
