@@ -1,0 +1,43 @@
+h2 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_summary_error {
+    padding: 5px;
+    color: #ff253a;
+}
+
+form .loginBtnWrapper {
+    text-align: center;
+}
+
+form button {
+    margin-top: 20px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    border: none;
+    background: #50b5ff;
+    color: #f5fbff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+form button:hover {
+    background: #f5fbff;
+    border: 1px solid #50b5ff;
+    color: #50b5ff;
+}
