@@ -86,21 +86,3 @@
     line-height: 21px;
     color: #a5a9a3;
 }
-.paginationBlock {
-    display: flex;
-    margin: 30px auto;
-    justify-content: center;
-}
-.paginationBlockItem {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: black;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.selectedPage {
-    font-weight: bold;
-}
