@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Timeline.module.css';
 import LeftSidbarPhotos from './leftSidbarPhotos/LeftSidbarPhotos';
-import CreatePost from './createPost/CreatePost';
 import SinglePost from './singlePost/SinglePost';
 import CreatePostContainer from "./createPost/CreatePostContainer";
 

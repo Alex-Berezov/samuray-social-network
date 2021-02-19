@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './CreatePost.module.css';
 import LukeSkywalker from '../../../../../../assets/img/LukeSkywalker.jpg';
 import {Field, reduxForm} from "redux-form";
-import {maxLength1500, minLength2, required} from "../../../../../../utils/validators/validators";
+import {maxLength1500, minLength2} from "../../../../../../utils/validators/validators";
 import {Textarea} from "../../../../../common/FormsControls/FormsControls";
 
 const createNewPostForm = props => {

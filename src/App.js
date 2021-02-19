@@ -33,7 +33,7 @@ class App extends React.Component {
         }
 
         return (
-            <div>
+            <div className="mainContainer">
                 <header>
                     <HeaderContainer/>
                 </header>
@@ -44,6 +44,7 @@ class App extends React.Component {
                                 <Navbar/>
                             </aside>
                             <div className="content_part">
+                                {/*<Route path='/' render={withSuspense(UsersContainer)}/>*/}
                                 <Route path='/Profile/:userId?' render={() => <ProfileContainer/>}/>
                                 <Route path='/Dialogs' render={withSuspense(DialogsContainer)}/>
                                 <Route path='/users' render={withSuspense(UsersContainer)}/>

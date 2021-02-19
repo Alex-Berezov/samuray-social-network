@@ -29,7 +29,7 @@
 }
 
 .tab_1_leftSidbar_photos .leftSidbar_photos_header h5 {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -38,7 +38,7 @@
 }
 
 .tab_1_leftSidbar_photos .leftSidbar_photos_header p {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -62,7 +62,7 @@
     height: 90px;
 }
 
-.tab_1_leftSidbar_photos .gallary ul li a img {
+.tab_1_leftSidbar_photos .gallary ul li img {
     height: 75px;
     margin: 0 auto;
 }
@@ -71,7 +71,7 @@
     .tab_1_leftSidbar_photos .gallary ul li {
         height: 110px;
     }
-    .tab_1_leftSidbar_photos .gallary ul li a img {
+    .tab_1_leftSidbar_photos .gallary ul li img {
         height: 100px;
     }
 }
@@ -81,7 +81,7 @@
       height: 90px;
     }
   
-    .tab_1_leftSidbar_photos .gallary ul li a img {
+    .tab_1_leftSidbar_photos .gallary ul li img {
       height: 80px;
     }
 }

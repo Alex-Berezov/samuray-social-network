@@ -9,11 +9,11 @@ import LIn from '../../../../../assets/img/LIn.png';
 const SocialLinks = () => {
     return (
         <div className={classes.left}>
-            <a href="#"><img src={fb} alt="" /></a>
-            <a href="#"><img src={tw} alt="" /></a>
-            <a href="#"><img src={inst} alt="" /></a>
-            <a href="#"><img src={you} alt="" /></a>
-            <a href="#"><img src={LIn} alt="" /></a>
+            <a href="https://www.facebook.com/"><img src={fb} alt="" /></a>
+            <a href="https://twitter.com/"><img src={tw} alt="" /></a>
+            <a href="https://instagram.com"><img src={inst} alt="" /></a>
+            <a href="https://www.youtube.com/"><img src={you} alt="" /></a>
+            <a href="https://www.linkedin.com/"><img src={LIn} alt="" /></a>
         </div>
     );
 }

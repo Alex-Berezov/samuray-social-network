@@ -10,15 +10,15 @@ const Header = (props) => {
                 <div className={classes.logo_part}>
                     <img src={logo} alt="Logotype" />
                     <div className={classes.button_new}>
-                        <span className={classes.line}></span>
-                        <span className={classes.line}></span>
-                        <span className={classes.line}></span>
+                        <span className={classes.line} />
+                        <span className={classes.line} />
+                        <span className={classes.line} />
                     </div>
                 </div>
                 <div className={classes.search_part}>
                     <form>
                         <input type="search" name="search_input" id="" placeholder="What are we looking for?" />
-                        <a href="#" className={classes.search_btn}><i className="fab fa-searchengin"></i></a>
+                        <p className={classes.search_btn}><i className="fab fa-searchengin" /></p>
                     </form>
                 </div>
                 <div className={classes.right_part}>
@@ -28,10 +28,10 @@ const Header = (props) => {
                             : <NavLink to={'/login'}>Login</NavLink> }
                     </div>
                     <div className={classes.notifications}>
-                        <i className="far fa-bell"></i>
+                        <i className="far fa-bell" />
                     </div>
                     <div className={classes.settings}>
-                        <i className="fas fa-sliders-h"></i>
+                        <i className="fas fa-sliders-h" />
                     </div>
                 </div>
             </div>

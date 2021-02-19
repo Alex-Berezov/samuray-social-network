@@ -9,6 +9,8 @@ const Profile = (props) => {
         <section className={classes.profile_part}>
             <MainCard
                 profile={props.profile}
+                isOwner={props.isOwner}
+                savePhoto={props.savePhoto}
                 status={props.status}
                 updateStatus={props.updateStatus}
             />

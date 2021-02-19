@@ -7,14 +7,14 @@
     align-items: center;
 }
 
-.comments_content_header .single_comments_foto a img {
+.comments_content_header .single_comments_foto img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
 }
 
 .comments_content_header p {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

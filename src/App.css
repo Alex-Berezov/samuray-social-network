@@ -111,6 +111,7 @@ img {
 .wrapper {
   padding-left: 10px;
   padding-right: 10px;
+  min-height: calc(100vh - 121px);
 }
 
 article .wrapper .left_sadiebar {
@@ -164,8 +165,6 @@ article .wrapper .content_part {
   display: flex;
   box-sizing: border-box;
   word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
   width: calc(58.333333333333336% - 30px);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

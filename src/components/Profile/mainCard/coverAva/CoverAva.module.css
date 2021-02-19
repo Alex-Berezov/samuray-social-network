@@ -43,7 +43,7 @@
 }
 
 .main_card_cover_ava .img_ava h2 {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -54,7 +54,7 @@
 }
 
 .main_card_cover_ava .img_ava p {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -64,12 +64,11 @@
 }
 
 .main_card_cover_ava .img_ava input {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
-    margin-top: 30px;
 }
 
 @media screen and (max-width: 480px) {

@@ -9,12 +9,10 @@ const SinglePost = props => (
     <div className={classes.single_post}>
         <div className={classes.single_post_header}>
             <div className={classes.single_post_header_foto}>
-                <a href="#">
-                    <img src={LukeSkywalker} alt="LukeSkywalker"/>
-                </a>
+                <img src={LukeSkywalker} alt="LukeSkywalker"/>
             </div>
             <div className={classes.single_post_header_title}>
-                <h6><a href="#">{props.name}</a></h6>
+                <h6>{props.name}</h6>
                 <p className={classes.post_date}>XX hour ago</p>
             </div>
         </div>
@@ -25,7 +23,7 @@ const SinglePost = props => (
         </div>
         <div className={classes.single_post_info}>
             <div className={classes.likes}>
-                <i className="far fa-thumbs-up"></i>
+                <i className="far fa-thumbs-up" />
                 <p>{props.likes} likes</p>
             </div>
             <div className={classes.comments}>

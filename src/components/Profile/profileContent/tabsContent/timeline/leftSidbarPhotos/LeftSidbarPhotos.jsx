@@ -20,15 +20,15 @@ const LeftSidbarPhotos = () => {
             <hr />
             <div className={classes.gallary}>
                 <ul>
-                    <li><a href="#"><img src={luke_img_1} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_2} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_3} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_4} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_5} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_6} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_7} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_8} alt="" /></a></li>
-                    <li><a href="#"><img src={luke_img_9} alt="" /></a></li>
+                    <li><img src={luke_img_1} alt="" /></li>
+                    <li><img src={luke_img_2} alt="" /></li>
+                    <li><img src={luke_img_3} alt="" /></li>
+                    <li><img src={luke_img_4} alt="" /></li>
+                    <li><img src={luke_img_5} alt="" /></li>
+                    <li><img src={luke_img_6} alt="" /></li>
+                    <li><img src={luke_img_7} alt="" /></li>
+                    <li><img src={luke_img_8} alt="" /></li>
+                    <li><img src={luke_img_9} alt="" /></li>
                 </ul>
             </div>
         </div>

@@ -41,7 +41,7 @@
 }
 
 .header .wrapper .search_part form input {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -56,14 +56,14 @@
     color: #a5a9a3;
 }
 
-.header .wrapper .search_part form a {
+.header .wrapper .search_part form p {
     position: absolute;
     right: 15px;
-    top: 10px;
+    top: 5px;
     font-size: 22px;
 }
 
-.header .wrapper .search_part form a i {
+.header .wrapper .search_part form p i {
     color: #50b5ff;
     font-size: 22px;
 }

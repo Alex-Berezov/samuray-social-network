@@ -15,7 +15,6 @@ const ProfileStatus = (props) => {
     const onStatusChange = (e) => {
         setStatus(e.currentTarget.value);
     }
-
     useEffect( () => {
         setStatus(status)
     }, [status])
